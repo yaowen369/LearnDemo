@@ -1,13 +1,11 @@
 package com.yaoxiaowen.learndemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.yaoxiaowen.learndemo.util.LogUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     public static final String TAG = "MainActivity";
 
