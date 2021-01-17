@@ -11,6 +11,7 @@ import com.github.lzyzsd.jsbridge.CallBackFunction;
 import com.github.lzyzsd.jsbridge.DefaultHandler;
 import com.google.gson.Gson;
 import com.yaoxiaowen.learndemo.R;
+import com.yaoxiaowen.learndemo.util.LogUtil;
 
 /**
  * Created by lianlingneng on 2017/5/19.
@@ -47,7 +48,7 @@ public class WebActivity extends Activity {
         mBridgeWebView.registerHandler("getUserInfo", new BridgeHandler() {
             @Override
             public void handler(String data, CallBackFunction function) {
-                Log.i(TAG, "handler = getUserInfo, data from web = " + data);
+                LogUtil.i(TAG, "handler = getUserInfo, data from web = " + data);
                 function.onCallBack(new Gson().toJson(mUserInfo));
             }
         });
